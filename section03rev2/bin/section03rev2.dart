@@ -14,10 +14,27 @@ void main(){
     // print('My list: ${_name.elementAt(1)}');
     // print("List: ${_name}");
 
-    for(int i = 0; i<_name.length; i++){
-        print("Name ${(i+1).toString()} is ${_name.elementAt(i)}");
-    }
+    // for(int i = 0; i<_name.length; i++){
+    //     print("Name ${(i+1).toString()} is ${_name.elementAt(i)}");
+    // }
 
+    // for Each
+    // for(String name in _name){
+    //     print("Name:  $name");
+    // }
+    
+    List<int> _values = [
+        12, 34, 34, 22, 44,
+    ];
+    
+    int main = 0;
+    _values.forEach((element) { 
+        main += element;
+    });
+    
+    print("sum is: $main");
+    
+    
 }
 
 void main2() {
