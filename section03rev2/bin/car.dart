@@ -50,3 +50,22 @@ class TibaSipa implements Car{
   String carModel = "Saipa";
 
 }
+
+
+/// For another type of code
+
+abstract class FixInterface{
+    void onEngineBroken(String Problem);
+}
+
+// Connection between 2 class with interface methods
+
+class MachineFixNeed implements FixInterface{
+
+    @override
+    void onEngineBroken(String Problem) {
+    // TODO: implement onEngineBroken
+  }
+
+
+}
