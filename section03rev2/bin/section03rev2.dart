@@ -31,3 +31,7 @@ class School{
         print('School.School $_school_national_code');
   }
 }
+
+class Motahari extends School{
+    
+}
