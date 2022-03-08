@@ -3,7 +3,24 @@
 
 import 'car.dart';
 
-void main() {
+void main(){
+    
+    List<String> _name = [
+        "Master",
+        "Main",
+        "Branch",
+    ];
+
+    // print('My list: ${_name.elementAt(1)}');
+    // print("List: ${_name}");
+
+    for(int i = 0; i<_name.length; i++){
+        print("Name ${(i+1).toString()} is ${_name.elementAt(i)}");
+    }
+
+}
+
+void main2() {
 
     // School School1 = School();
     // School School2 = School(name: "Test Uni");
