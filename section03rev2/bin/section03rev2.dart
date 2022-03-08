@@ -1,20 +1,27 @@
 // import 'SchoolName';
 
 
+import 'car.dart';
+
 void main() {
 
-    School School1 = School();
-    School School2 = School(name: "Test Uni");
-    School School3 = School();
-    School School4 = School(schoolCode: 34);
-    School School5 = School(name: "A", schoolCode: 12);
+    // School School1 = School();
+    // School School2 = School(name: "Test Uni");
+    // School School3 = School();
+    // School School4 = School(schoolCode: 34);
+    // School School5 = School(name: "A", schoolCode: 12);
+    //
+    // print("School name = ${School1.name}");
+    // print("School name = ${School2.name}");
+    // print("School name = " + (School3.name??"evrything typing return default"));
+    // print("School name = " + (School3.schoolCode?? 12).toString());
+    // print("School name = " + (School4.schoolCode).toString());
+    // print('School 5 = ${School5}');
 
-    print("School name = ${School1.name}");
-    print("School name = ${School2.name}");
-    print("School name = " + (School3.name??"evrything typing return default"));
-    print("School name = " + (School3.schoolCode?? 12).toString());
-    print("School name = " + (School4.schoolCode).toString());
-    print('School 5 = ${School5}');
+
+
+
+
 }
 
 
@@ -32,6 +39,3 @@ class School{
   }
 }
 
-class Motahari extends School{
-    
-}

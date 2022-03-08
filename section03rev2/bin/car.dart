@@ -7,30 +7,46 @@ class Car{
 
 }
 
-class Pride extends Car{
-    @override
-  // TODO: implement carColor
-  String get carColor => "Red";
+// class Pride extends Car{
+//
+//
+//     @override
+//   // TODO: implement carColor
+//   String get carColor => "Red";
+//
+//     @override
+//   // TODO: implement carModel
+//   String get carModel => "Saipa";
+//
+//     @override
+//   // TODO: implement carEngine
+//   int get carEngine => 22332;
+// }
 
-    @override
-  // TODO: implement carModel
-  String get carModel => "Saipa";
+// class Pegue extends Car{
+//     @override
+//   // TODO: implement carColor
+//   String get carColor => "Blue";
+//
+//     @override
+//   // TODO: implement carModel
+//   String get carModel => "IranKhodro";
+//
+//     @override
+//   // TODO: implement carEngine
+//   int get carEngine => 4471;
+// }
 
-    @override
-  // TODO: implement carEngine
-  int get carEngine => 22332;
-}
 
-class Pegue extends Car{
-    @override
-  // TODO: implement carColor
-  String get carColor => "Blue";
+// Interface
+class TibaSipa implements Car{
+  @override
+  String carColor = " WhiteBlue";
 
-    @override
-  // TODO: implement carModel
-  String get carModel => "IranKhodro";
+  @override
+  int carEngine = 3478;
 
-    @override
-  // TODO: implement carEngine
-  int get carEngine => 4471;
+  @override
+  String carModel = "Saipa";
+
 }
