@@ -18,10 +18,12 @@ void main() {
     // print("School name = " + (School4.schoolCode).toString());
     // print('School 5 = ${School5}');
 
+    TibaSipa New2020 = new TibaSipa();          // #1 class name  #2 new name =  #3 new   #class name();
+    print('main color Tiba new 2020 is: ${New2020.carColor}');
 
-
-
-
+    TibaSipa New2021 = new TibaSipa();          // #1 class name  #2 new name =  #3 new   #class name();
+    New2021.carColor = "Blue";                          // set another color
+    print('main color Tiba new 2021 is: ${New2021.carColor}');
 }
 
 
