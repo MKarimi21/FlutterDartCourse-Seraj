@@ -2,15 +2,21 @@
 import 'package:flutter/material.dart';
 
 class SecendClass extends StatefulWidget {
-  const SecendClass({Key? key}) : super(key: key);
+  
 
   @override
-  State<SecendClass> createState() => _SecendClassState();
-}
+  State<StatefulWidget> createState() {
+    return _SecendClassState();
+  }
 
 class _SecendClassState extends State<SecendClass> {
   @override
   Widget build(BuildContext context) {
-    return Container();
-  }
-}
+    return Scaffold(
+      appBar: AppBar( 
+        backgroundColor: Colors.red,
+        title: Text('Hello Mostafa'),
+      )
+    )
+    }
+
