@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:section05rev02/widgets/container_widget.dart';
 
 import 'package:section05rev02/widgets/text_widget.dart';
 
@@ -51,6 +52,17 @@ class _HomePageState extends State<HomePage> {
               },
               child: Text(
                 "Text",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (builder) => ContainerWidget()));
+              },
+              child: Text(
+                "Container Widget",
                 style: TextStyle(color: Colors.white),
               ),
             )
