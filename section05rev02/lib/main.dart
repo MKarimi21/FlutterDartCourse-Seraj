@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Test App',
       theme: ThemeData(
         brightness: Brightness.light,
-        primarySwatch: Colors.green,
+        primarySwatch: Color.fromARGB(255, 157, 35, 187),
       ),
       home: const MyHomePage(title: 'Test and Start'),
     );
