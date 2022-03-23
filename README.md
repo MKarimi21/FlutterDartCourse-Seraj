@@ -1,2 +1,8 @@
-# FlutterDartCourse-Seraj
-The Flutter Course in Seraj Academy 
+# دوره آموزش زبان دارت و فریم ورک فلاتر
+
+
+##  سازمان فضای مجازی سراج 
+
+بهمن ماه 1400 الی بهار 1401
+
+مصطفی کریمی
