@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:section05rev02/widgets/container_widget.dart';
+import 'package:section05rev02/widgets/row_widget.dart';
 
 import 'package:section05rev02/widgets/text_widget.dart';
 
@@ -63,6 +64,17 @@ class _HomePageState extends State<HomePage> {
               },
               child: Text(
                 "Container",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              color: Colors.red,
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (builder) => RowWidget()));
+              },
+              child: Text(
+                "Column and Row",
                 style: TextStyle(color: Colors.white),
               ),
             )
