@@ -56,13 +56,13 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             MaterialButton(
-              color: Colors.black,
+              color: Colors.red,
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (builder) => ContainerWidget()));
               },
               child: Text(
-                "Container Widget",
+                "Container",
                 style: TextStyle(color: Colors.white),
               ),
             )
