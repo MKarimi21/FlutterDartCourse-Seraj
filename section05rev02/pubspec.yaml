@@ -77,6 +77,10 @@ flutter:
     - family: iransans
       fonts:
         - asset: assets/fonts/iran_sans.ttf
+    - family: opensans
+      fonts:
+        - asset: assets/fonts/OpenSans-Bold.ttf
+        - asset: assets/fonts/OpenSans-Medium.ttf
         
   #         style: italic
   #   - family: Trajan Pro
