@@ -1,15 +1,15 @@
 
 import 'package:flutter/material.dart';
 
-class SecendClass extends StatefulWidget {
+class SecondClass extends StatefulWidget {
   
 
   @override
   State<StatefulWidget> createState() {
-    return _SecendClassState();
+    return _SecondClassState();
   }
 
-class _SecendClassState extends State<SecendClass> {
+class _SecondClassState extends State<SecondClass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
