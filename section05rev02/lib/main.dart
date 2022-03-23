@@ -17,9 +17,9 @@ class MyApp extends StatelessWidget {
       title: 'Test App',
       theme: ThemeData(
           brightness: Brightness.light,
-          primarySwatch: Colors.blueAccent,
+          primarySwatch: Colors.blue,
           fontFamily: "iransans"),
-      home: HomePage(title: 'منوی راهنمای اپلیکشن'),
+      home: HomePage(),
     );
   }
 }

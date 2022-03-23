@@ -15,13 +15,15 @@ class _TextWidgetState extends State<TextWidget> {
         title: Text("Text"),
       ),
       body: Center(
-        child: Text("This is Text"
-        style: TextStyle(
-          color: Colors.red,
-          fontFamily: "opensans",
-          fontSize: 25,
-          fontWeight: FontWeight.bold,
-        ),),
+        child: Text(
+          "This is Text",
+          style: TextStyle(
+            color: Colors.red,
+            fontFamily: "opensans",
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
     );
   }
