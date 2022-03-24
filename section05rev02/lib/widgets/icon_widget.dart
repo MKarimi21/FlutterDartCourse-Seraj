@@ -44,9 +44,12 @@ class _IconWidgetState extends State<IconWidget> {
 
   void _onClickedIcon() {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text(
-      "ارسال انجام شد",
-      textDirection: TextDirection.rtl,
-    )));
+      content: Text(
+        "ارسال انجام شد",
+        textDirection: TextDirection.rtl,
+      ),
+      duration: Duration(seconds: 1),
+      backgroundColor: Colors.red,
+    ));
   }
 }
