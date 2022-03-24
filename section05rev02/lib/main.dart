@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:section05rev02/widgets/container_widget.dart';
 import 'package:section05rev02/widgets/row_widget.dart';
-
 import 'package:section05rev02/widgets/text_widget.dart';
 
 void main() {
@@ -45,39 +44,53 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            MaterialButton(
-              color: Colors.red,
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (builder) => TextWidget()));
-              },
-              child: Text(
-                "Text",
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-            MaterialButton(
-              color: Colors.red,
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (builder) => ContainerWidget()));
-              },
-              child: Text(
-                "Container",
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-            MaterialButton(
-              color: Colors.red,
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (builder) => RowWidget()));
-              },
-              child: Text(
-                "Column and Row",
-                style: TextStyle(color: Colors.white),
-              ),
-            )
+            Container(
+                width: MediaQuery.of(context).size.width * 0.7,
+                height: MediaQuery.of(context).size.height * 0.07,
+                margin: EdgeInsets.symmetric(vertical: 9),
+                child: MaterialButton(
+                  color: Colors.red,
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (builder) => TextWidget()));
+                  },
+                  child: Text(
+                    "Text",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                )),
+            Container(
+                width: MediaQuery.of(context).size.width * 0.7,
+                height: MediaQuery.of(context).size.height * 0.07,
+                margin: EdgeInsets.symmetric(vertical: 9),
+                child: MaterialButton(
+                  color: Colors.red,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (builder) => ContainerWidget()));
+                  },
+                  child: Text(
+                    "Container",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                )),
+            Container(
+                width: MediaQuery.of(context).size.width * 0.7,
+                height: MediaQuery.of(context).size.height * 0.07,
+                margin: EdgeInsets.symmetric(vertical: 9),
+                child: MaterialButton(
+                  color: Colors.red,
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (builder) => RowWidget()));
+                  },
+                  child: Text(
+                    "Column and Row",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                )),
           ],
         ),
       ),
