@@ -21,21 +21,7 @@ class _ImageWidgetState extends State<ImageWidget> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.alternate_email_outlined,
-                color: Colors.blueAccent,
-                size: 80,
-              ),
-              IconButton(
-                onPressed: _onClickedIcon,
-                icon: Icon(
-                  Icons.send_outlined,
-                  color: Colors.blue,
-                  size: 60,
-                ),
-              ),
-            ],
+            children: [],
           ),
         ),
       ),
@@ -51,5 +37,5 @@ class _ImageWidgetState extends State<ImageWidget> {
       duration: Duration(seconds: 1),
       backgroundColor: Colors.red,
     ));
-  }
+  } // void _onClickedIcon
 }
