@@ -21,7 +21,26 @@ class _ImageWidgetState extends State<ImageWidget> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [],
+            children: [
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 15),
+                child: Image.asset(
+                  "assets/images/avatar.png",
+                  width: 121,
+                  height: 121,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 15),
+                child: Image.asset(
+                  "assets/images/avatar.png",
+                  width: 40,
+                  height: 40,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ],
           ),
         ),
       ),
