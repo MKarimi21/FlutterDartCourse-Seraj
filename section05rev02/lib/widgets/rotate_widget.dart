@@ -8,7 +8,6 @@ class RotateWidget extends StatefulWidget {
 }
 
 class _RotateWidgetState extends State<RotateWidget> {
-  double _opacity = 0.25;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,46 +15,24 @@ class _RotateWidgetState extends State<RotateWidget> {
         title: Text("Rotate"),
       ),
       body: Container(
+        width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.all(9),
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                InkWell(
-                  onHover: _onHoverImage,
-                  child: Opacity(
-                    opacity: _opacity,
-                    child: Container(
-                      width: 180,
-                      height: 180,
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.brown, width: 6)),
-                      margin: EdgeInsets.symmetric(vertical: 15),
-                      child: Image.asset(
-                        "assets/images/avatar.png",
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            ),
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            RotatedBox(
+              quarterTurns: 0,
+              child: Container(
+                width: 150,
+                height: 50,
+                color: Colors.green,
+                child: Center(child: Text("متن آماده جهت تغییر")),
+              ),
+            )
+          ],
         ),
       ),
     );
-  }
-
-  void _onHoverImage(bool value) {
-    if (value == true) {
-      _opacity = 0.9;
-      setState(() {});
-    } else {
-      _opacity = 0.25;
-      setState(() {});
-    }
   }
 }
