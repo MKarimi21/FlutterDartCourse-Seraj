@@ -8,6 +8,7 @@ class ClickWidget extends StatefulWidget {
 }
 
 class _ClickWidgetState extends State<ClickWidget> {
+  double _opacity = 0.25;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,17 +23,20 @@ class _ClickWidgetState extends State<ClickWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Opacity(
-                opacity: 0.35,
-                child: Container(
-                  width: 180,
-                  height: 180,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.brown, width: 6)),
-                  margin: EdgeInsets.symmetric(vertical: 15),
-                  child: Image.asset(
-                    "assets/images/avatar.png",
-                    fit: BoxFit.fill,
+              InkWell(
+                onHover: _onHoverImage,
+                child: Opacity(
+                  opacity: _opacity,
+                  child: Container(
+                    width: 180,
+                    height: 180,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.brown, width: 6)),
+                    margin: EdgeInsets.symmetric(vertical: 15),
+                    child: Image.asset(
+                      "assets/images/avatar.png",
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
               )
@@ -41,5 +45,15 @@ class _ClickWidgetState extends State<ClickWidget> {
         ),
       ),
     );
+  }
+
+  void _onHoverImage(bool value) {
+    if (value == true) {
+      _opacity = 0.9;
+      setState(() {});
+    } else {
+      _opacity = 0.25;
+      setState(() {});
+    }
   }
 }
