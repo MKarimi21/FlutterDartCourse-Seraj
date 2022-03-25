@@ -123,7 +123,13 @@ class _AnimationContainerWidgetState extends State<AnimationContainerWidget> {
                           ),
                         )),
                   ),
-                )
+                ),
+                Switch(
+                    value: _switch,
+                    onChanged: (bool? s) {
+                      _switch = s!;
+                      setState(() {});
+                    })
               ],
             ),
           ),
