@@ -42,6 +42,7 @@ class _AnimationContainerWidgetState extends State<AnimationContainerWidget> {
                     BoxDecoration(border: Border.all(color: Colors.green)),
                 child: Center(
                     child: TextField(
+                        keyboardType: TextInputType.number,
                         controller: _widthController,
                         decoration: InputDecoration(
                             border: InputBorder.none, hintText: "Width Size"))),
@@ -55,6 +56,7 @@ class _AnimationContainerWidgetState extends State<AnimationContainerWidget> {
                     BoxDecoration(border: Border.all(color: Colors.green)),
                 child: Center(
                     child: TextField(
+                        keyboardType: TextInputType.number,
                         controller: _heightController,
                         decoration: InputDecoration(
                             border: InputBorder.none,
@@ -66,11 +68,22 @@ class _AnimationContainerWidgetState extends State<AnimationContainerWidget> {
                 padding: EdgeInsets.symmetric(horizontal: 5),
                 margin: EdgeInsets.symmetric(vertical: 7),
                 decoration: BoxDecoration(color: Colors.red),
-                child: Center(
-                    child: Text(
-                  "Submit",
-                  style: TextStyle(color: Colors.white),
-                )),
+                child: InkWell(
+                  onTap: () {
+                    String _widthString = _widthController.text;
+                    _width = double.parse(_widthString);
+
+                    String _heightString = _heightController.text;
+                    _width = double.parse(_heightString);
+
+                    setState(() {});
+                  },
+                  child: Center(
+                      child: Text(
+                    "Submit",
+                    style: TextStyle(color: Colors.white),
+                  )),
+                ),
               ),
             ],
           ),
