@@ -22,7 +22,7 @@ class _RotateWidgetState extends State<RotateWidget> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             RotatedBox(
-              quarterTurns: 0,
+              quarterTurns: 3, // 0, 1, 2, 3, 4
               child: Container(
                 width: 150,
                 height: 50,
