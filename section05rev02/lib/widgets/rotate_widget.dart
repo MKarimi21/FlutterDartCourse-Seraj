@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class ClickWidget extends StatefulWidget {
-  const ClickWidget({Key? key}) : super(key: key);
+class RotateWidget extends StatefulWidget {
+  const RotateWidget({Key? key}) : super(key: key);
 
   @override
-  _ClickWidgetState createState() => _ClickWidgetState();
+  _RotateWidgetState createState() => _RotateWidgetState();
 }
 
-class _ClickWidgetState extends State<ClickWidget> {
+class _RotateWidgetState extends State<RotateWidget> {
   double _opacity = 0.25;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Click"),
+        title: Text("Rotate"),
       ),
       body: Container(
         padding: EdgeInsets.all(9),
