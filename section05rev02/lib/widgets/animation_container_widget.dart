@@ -14,6 +14,7 @@ class _AnimationContainerWidgetState extends State<AnimationContainerWidget> {
   Color _color = Colors.black87;
   TextEditingController _widthController = new TextEditingController();
   TextEditingController _heightController = new TextEditingController();
+  bool _switch = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,8 +37,6 @@ class _AnimationContainerWidgetState extends State<AnimationContainerWidget> {
                   duration: Duration(seconds: 1),
                   child: Image.asset(
                     "assets/images/avatar.png",
-                    width: _width,
-                    height: _height,
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -95,6 +94,36 @@ class _AnimationContainerWidgetState extends State<AnimationContainerWidget> {
                     )),
                   ),
                 ),
+                GestureDetector(
+                  onTap: () {
+                    _switch = !_switch;
+                    setState(() {});
+                  },
+                  child: Container(
+                    width: 121,
+                    height: 42,
+                    padding: EdgeInsets.symmetric(horizontal: 4),
+                    margin: EdgeInsets.symmetric(vertical: 7),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(500),
+                      color:
+                          _switch ? Colors.green : Colors.blue.withOpacity(0.7),
+                    ),
+                    child: AnimatedAlign(
+                        duration: Duration(milliseconds: 450),
+                        alignment: _switch
+                            ? Alignment.centerRight
+                            : Alignment.centerLeft,
+                        child: Container(
+                          width: 37,
+                          height: 37,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: _switch ? Colors.blue : Colors.red,
+                          ),
+                        )),
+                  ),
+                )
               ],
             ),
           ),
