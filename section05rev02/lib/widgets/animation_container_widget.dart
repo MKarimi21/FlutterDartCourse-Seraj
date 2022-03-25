@@ -16,7 +16,7 @@ class _AnimationContainerWidgetState extends State<AnimationContainerWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Animation Container"),
+        title: Text("Text Fild & Animation Container"),
       ),
       body: Container(
         padding: EdgeInsets.all(9),
@@ -30,6 +30,31 @@ class _AnimationContainerWidgetState extends State<AnimationContainerWidget> {
                 width: _width,
                 height: _height,
                 color: _color,
+              ),
+              Container(
+                width: 221,
+                height: 42,
+                padding: EdgeInsets.symmetric(horizontal: 5),
+                margin: EdgeInsets.symmetric(vertical: 7),
+                decoration:
+                    BoxDecoration(border: Border.all(color: Colors.green)),
+                child: Center(
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none, hintText: "Width Size"))),
+              ),
+              Container(
+                width: 221,
+                height: 42,
+                padding: EdgeInsets.symmetric(horizontal: 5),
+                margin: EdgeInsets.symmetric(vertical: 7),
+                decoration:
+                    BoxDecoration(border: Border.all(color: Colors.green)),
+                child: Center(
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Height Size"))),
               ),
             ],
           ),
