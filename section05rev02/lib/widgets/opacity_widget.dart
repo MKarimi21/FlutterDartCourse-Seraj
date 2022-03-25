@@ -22,39 +22,24 @@ class _OpacityWidgetState extends State<OpacityWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 15),
-                child: Image.asset(
-                  "assets/images/avatar.png",
-                  width: 121,
-                  height: 121,
-                  fit: BoxFit.fill,
+              Opacity(
+                opacity: 0.35,
+                child: Container(
+                  width: 180,
+                  height: 180,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.brown, width: 6)),
+                  margin: EdgeInsets.symmetric(vertical: 15),
+                  child: Image.asset(
+                    "assets/images/avatar.png",
+                    fit: BoxFit.fill,
+                  ),
                 ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 15),
-                child: Image.asset(
-                  "assets/images/avatar.png",
-                  width: 40,
-                  height: 40,
-                  fit: BoxFit.contain,
-                ),
-              ),
+              )
             ],
           ),
         ),
       ),
     );
   }
-
-  void _onClickedIcon() {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(
-        "ارسال انجام شد",
-        textDirection: TextDirection.rtl,
-      ),
-      duration: Duration(seconds: 1),
-      backgroundColor: Colors.red,
-    ));
-  } // void _onClickedIcon
 }
