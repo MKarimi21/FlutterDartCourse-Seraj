@@ -46,136 +46,146 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-                width: MediaQuery.of(context).size.width * 0.7,
-                height: MediaQuery.of(context).size.height * 0.07,
-                margin: EdgeInsets.symmetric(vertical: 9),
-                child: MaterialButton(
-                  color: Colors.red,
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (builder) => TextWidget()));
-                  },
-                  child: Text(
-                    "Text",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                )),
-            Container(
-                width: MediaQuery.of(context).size.width * 0.7,
-                height: MediaQuery.of(context).size.height * 0.07,
-                margin: EdgeInsets.symmetric(vertical: 9),
-                child: MaterialButton(
-                  color: Colors.red,
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (builder) => ContainerWidget()));
-                  },
-                  child: Text(
-                    "Container",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                )),
-            Container(
-                width: MediaQuery.of(context).size.width * 0.7,
-                height: MediaQuery.of(context).size.height * 0.07,
-                margin: EdgeInsets.symmetric(vertical: 9),
-                child: MaterialButton(
-                  color: Colors.red,
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (builder) => RowWidget()));
-                  },
-                  child: Text(
-                    "Column and Row",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                )),
-            Container(
-                width: MediaQuery.of(context).size.width * 0.7,
-                height: MediaQuery.of(context).size.height * 0.07,
-                margin: EdgeInsets.symmetric(vertical: 9),
-                child: MaterialButton(
-                  color: Colors.red,
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (builder) => IconWidget()));
-                  },
-                  child: Text(
-                    "Icon",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                )),
-            Container(
-                width: MediaQuery.of(context).size.width * 0.7,
-                height: MediaQuery.of(context).size.height * 0.07,
-                margin: EdgeInsets.symmetric(vertical: 9),
-                child: MaterialButton(
-                  color: Colors.red,
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (builder) => ImageWidget()));
-                  },
-                  child: Text(
-                    "Image",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                )),
-            Container(
-                width: MediaQuery.of(context).size.width * 0.7,
-                height: MediaQuery.of(context).size.height * 0.07,
-                margin: EdgeInsets.symmetric(vertical: 9),
-                child: MaterialButton(
-                  color: Colors.red,
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (builder) => OpacityWidget()));
-                  },
-                  child: Text(
-                    "Opacity",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                )),
-            Container(
-                width: MediaQuery.of(context).size.width * 0.7,
-                height: MediaQuery.of(context).size.height * 0.07,
-                margin: EdgeInsets.symmetric(vertical: 9),
-                child: MaterialButton(
-                  color: Colors.red,
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (builder) => ClickWidget()));
-                  },
-                  child: Text(
-                    "Click",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                )),
-            Container(
-                width: MediaQuery.of(context).size.width * 0.7,
-                height: MediaQuery.of(context).size.height * 0.07,
-                margin: EdgeInsets.symmetric(vertical: 9),
-                child: MaterialButton(
-                  color: Colors.red,
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (builder) => RotateWidget()));
-                  },
-                  child: Text(
-                    "Rotate",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                )),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  margin: EdgeInsets.symmetric(vertical: 9),
+                  child: MaterialButton(
+                    color: Colors.red,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => TextWidget()));
+                    },
+                    child: Text(
+                      "Text",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  margin: EdgeInsets.symmetric(vertical: 9),
+                  child: MaterialButton(
+                    color: Colors.red,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => ContainerWidget()));
+                    },
+                    child: Text(
+                      "Container",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  margin: EdgeInsets.symmetric(vertical: 9),
+                  child: MaterialButton(
+                    color: Colors.red,
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (builder) => RowWidget()));
+                    },
+                    child: Text(
+                      "Column and Row",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  margin: EdgeInsets.symmetric(vertical: 9),
+                  child: MaterialButton(
+                    color: Colors.red,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => IconWidget()));
+                    },
+                    child: Text(
+                      "Icon",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  margin: EdgeInsets.symmetric(vertical: 9),
+                  child: MaterialButton(
+                    color: Colors.red,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => ImageWidget()));
+                    },
+                    child: Text(
+                      "Image",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  margin: EdgeInsets.symmetric(vertical: 9),
+                  child: MaterialButton(
+                    color: Colors.red,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => OpacityWidget()));
+                    },
+                    child: Text(
+                      "Opacity",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  margin: EdgeInsets.symmetric(vertical: 9),
+                  child: MaterialButton(
+                    color: Colors.red,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => ClickWidget()));
+                    },
+                    child: Text(
+                      "Click",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  margin: EdgeInsets.symmetric(vertical: 9),
+                  child: MaterialButton(
+                    color: Colors.red,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => RotateWidget()));
+                    },
+                    child: Text(
+                      "Rotate",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
+            ],
+          ),
         ),
       ),
     );
