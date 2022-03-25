@@ -9,11 +9,14 @@ class AnimationContainerWidget extends StatefulWidget {
 }
 
 class _AnimationContainerWidgetState extends State<AnimationContainerWidget> {
+  double _width = 100;
+  double _height = 100;
+  Color _color = Colors.black87;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Image"),
+        title: Text("Animation Container"),
       ),
       body: Container(
         padding: EdgeInsets.all(9),
@@ -24,22 +27,9 @@ class _AnimationContainerWidgetState extends State<AnimationContainerWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.symmetric(vertical: 15),
-                child: Image.asset(
-                  "assets/images/avatar.png",
-                  width: 121,
-                  height: 121,
-                  fit: BoxFit.fill,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 15),
-                child: Image.asset(
-                  "assets/images/avatar.png",
-                  width: 40,
-                  height: 40,
-                  fit: BoxFit.contain,
-                ),
+                width: _width,
+                height: _height,
+                color: _color,
               ),
             ],
           ),
@@ -47,15 +37,4 @@ class _AnimationContainerWidgetState extends State<AnimationContainerWidget> {
       ),
     );
   }
-
-  void _onClickedIcon() {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(
-        "ارسال انجام شد",
-        textDirection: TextDirection.rtl,
-      ),
-      duration: Duration(seconds: 1),
-      backgroundColor: Colors.red,
-    ));
-  } // void _onClickedIcon
 }
