@@ -27,7 +27,11 @@ class _RotateWidgetState extends State<RotateWidget> {
                 width: 150,
                 height: 50,
                 color: Colors.green,
-                child: Center(child: Text("متن آماده جهت تغییر")),
+                child: Center(
+                    child: Text(
+                  "متن آماده جهت تغییر",
+                  style: TextStyle(color: Colors.white),
+                )),
               ),
             )
           ],
