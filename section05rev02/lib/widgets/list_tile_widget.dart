@@ -15,7 +15,24 @@ class _ListTileWidgetState extends State<ListTileWidget> {
           title: Text("List Tile"),
         ),
         body: Container(
-          child: Container(),
-        ));
+            padding: EdgeInsets.all(10),
+            child: SingleChildScrollView(
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: List.generate(
+                      12,
+                      (index) => ListTile(
+                            title: Text("Person"),
+                            subtitle: Text("About Person"),
+                            leading: Icon(Icons.person),
+                            selected: true,
+                            onTap: () {},
+                          )).toList(),
+                ),
+              ),
+            )));
   }
 }
