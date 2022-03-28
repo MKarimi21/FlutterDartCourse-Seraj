@@ -29,6 +29,15 @@ class _ListTileWidgetState extends State<ListTileWidget> {
                         title: Text("Person"),
                         subtitle: Text("About Person"),
                         leading: Icon(Icons.person),
+                        trailing: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(Icons.favorite),
+                            Icon(Icons.call),
+                            Icon(Icons.message),
+                            Icon(Icons.delete),
+                          ],
+                        ),
                         selected: _select,
                         onTap: () {
                           _selected = index;
