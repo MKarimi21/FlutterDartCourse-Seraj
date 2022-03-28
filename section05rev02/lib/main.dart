@@ -5,6 +5,7 @@ import 'package:section05rev02/widgets/container_widget.dart';
 import 'package:section05rev02/widgets/icon_widget.dart';
 import 'package:section05rev02/widgets/image_widget.dart';
 import 'package:section05rev02/widgets/list_tile_widget.dart';
+import 'package:section05rev02/widgets/list_view_widget.dart';
 import 'package:section05rev02/widgets/opacity_widget.dart';
 import 'package:section05rev02/widgets/rotate_widget.dart';
 import 'package:section05rev02/widgets/row_widget.dart';
@@ -218,6 +219,23 @@ class _HomePageState extends State<HomePage> {
                     },
                     child: Text(
                       "List Tile",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  margin: EdgeInsets.symmetric(vertical: 9),
+                  child: MaterialButton(
+                    color: Colors.red,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => ListViewWidget()));
+                    },
+                    child: Text(
+                      "List View",
                       style: TextStyle(color: Colors.white),
                     ),
                   )),
