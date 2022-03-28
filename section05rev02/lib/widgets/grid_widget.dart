@@ -47,20 +47,25 @@ class _GridViewWidgetState extends State<GridViewWidget> {
       title: Text(_name.elementAt(index)),
       children: [
         ExpansionTile(
-          title: Text("Number ${index + 1}"),
+          title: Text("More information"),
           children: [
-            Center(
-                child: Container(
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 3),
               child: Wrap(
                 spacing: 5,
                 children: [
-                  Icon(Icons.favorite),
-                  Icon(Icons.call),
-                  Icon(Icons.message),
-                  Icon(Icons.delete),
+                  Text("Connection: ", style: TextStyle(color: Colors.green)),
+                  Icon(
+                    Icons.call,
+                    color: Colors.green,
+                  ),
+                  Icon(
+                    Icons.message,
+                    color: Colors.green,
+                  ),
                 ],
               ),
-            ))
+            )
           ],
         ),
       ],
