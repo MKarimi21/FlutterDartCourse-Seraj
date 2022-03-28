@@ -8,6 +8,7 @@ class ListTileWidget extends StatefulWidget {
 }
 
 class _ListTileWidgetState extends State<ListTileWidget> {
+  dynamic _selected;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,21 +19,24 @@ class _ListTileWidgetState extends State<ListTileWidget> {
             padding: EdgeInsets.all(10),
             child: SingleChildScrollView(
               child: Container(
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: List.generate(
-                      12,
-                      (index) => ListTile(
-                            title: Text("Person"),
-                            subtitle: Text("About Person"),
-                            leading: Icon(Icons.person),
-                            selected: true,
-                            onTap: () {},
-                          )).toList(),
-                ),
-              ),
+                  width: MediaQuery.of(context).size.width,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: List.generate(12, (index) {
+                      bool _select = (_selected == index);
+                      return ListTile(
+                        title: Text("Person"),
+                        subtitle: Text("About Person"),
+                        leading: Icon(Icons.person),
+                        selected: _select,
+                        onTap: () {
+                          _selected = index;
+                          setState(() {});
+                        },
+                      );
+                    }).toList(),
+                  )),
             )));
   }
 }
