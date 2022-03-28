@@ -29,8 +29,8 @@ class _ListTileWidgetState extends State<ListTileWidget> {
                         title: Text("Person"),
                         subtitle: Text("About Person"),
                         leading: Icon(Icons.person),
-                        trailing: Row(
-                          mainAxisSize: MainAxisSize.min,
+                        trailing: Wrap(
+                          spacing: 5,
                           children: [
                             Icon(Icons.favorite),
                             Icon(Icons.call),
