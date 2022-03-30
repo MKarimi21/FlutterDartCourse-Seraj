@@ -7,7 +7,26 @@ class AnimatedIconWidget extends StatefulWidget {
   _AnimatedIconWidgetState createState() => _AnimatedIconWidgetState();
 }
 
-class _AnimatedIconWidgetState extends State<AnimatedIconWidget> {
+class _AnimatedIconWidgetState extends State<AnimatedIconWidget>
+    with TickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    _controller =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 500));
+
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    // TODO: implement dispose
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,39 +41,14 @@ class _AnimatedIconWidgetState extends State<AnimatedIconWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 15),
-                child: Image.asset(
-                  "assets/images/avatar.png",
-                  width: 121,
-                  height: 121,
-                  fit: BoxFit.fill,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 15),
-                child: Image.asset(
-                  "assets/images/avatar.png",
-                  width: 40,
-                  height: 40,
-                  fit: BoxFit.contain,
-                ),
-              ),
+              AnimatedIcon(
+                icon: AnimatedIcons.arrow_menu,
+                progress: _controller,
+              )
             ],
           ),
         ),
       ),
     );
   }
-
-  void _onClickedIcon() {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(
-        "ارسال انجام شد",
-        textDirection: TextDirection.rtl,
-      ),
-      duration: Duration(seconds: 1),
-      backgroundColor: Colors.red,
-    ));
-  } // void _onClickedIcon
 }
