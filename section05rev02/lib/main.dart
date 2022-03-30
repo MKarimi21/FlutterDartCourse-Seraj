@@ -3,6 +3,7 @@ import 'package:section05rev02/widgets/animation_container_widget.dart';
 import 'package:section05rev02/widgets/click_widget.dart';
 import 'package:section05rev02/widgets/container_widget.dart';
 import 'package:section05rev02/widgets/grid_widget.dart';
+import 'package:section05rev02/widgets/hero_widget.dart';
 import 'package:section05rev02/widgets/icon_widget.dart';
 import 'package:section05rev02/widgets/image_widget.dart';
 import 'package:section05rev02/widgets/list_tile_widget.dart';
@@ -254,6 +255,23 @@ class _HomePageState extends State<HomePage> {
                     },
                     child: Text(
                       "Grid View",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  margin: EdgeInsets.symmetric(vertical: 9),
+                  child: MaterialButton(
+                    color: Colors.red,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => HeroWidget()));
+                    },
+                    child: Text(
+                      "Hero",
                       style: TextStyle(color: Colors.white),
                     ),
                   )),
