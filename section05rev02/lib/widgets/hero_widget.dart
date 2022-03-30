@@ -12,7 +12,8 @@ class _HeroWidgetState extends State<HeroWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hero"),
+        title: Text("Hero First Page"),
+        backgroundColor: Colors.red,
       ),
       body: Container(
         padding: EdgeInsets.all(9),
@@ -21,40 +22,40 @@ class _HeroWidgetState extends State<HeroWidget> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 15),
-                child: Image.asset(
-                  "assets/images/avatar.png",
-                  width: 121,
-                  height: 121,
-                  fit: BoxFit.fill,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 15),
-                child: Image.asset(
-                  "assets/images/avatar.png",
-                  width: 40,
-                  height: 40,
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ],
+            children: [],
           ),
         ),
       ),
     );
   }
+}
 
-  void _onClickedIcon() {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(
-        "ارسال انجام شد",
-        textDirection: TextDirection.rtl,
+class SecondHeroWidget extends StatefulWidget {
+  SecondHeroWidget({Key? key}) : super(key: key);
+
+  @override
+  State<SecondHeroWidget> createState() => _SecondHeroWidgetState();
+}
+
+class _SecondHeroWidgetState extends State<SecondHeroWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Hero Second Page"),
+        backgroundColor: Colors.yellow,
       ),
-      duration: Duration(seconds: 1),
-      backgroundColor: Colors.red,
-    ));
-  } // void _onClickedIcon
+      body: Container(
+        padding: EdgeInsets.all(9),
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [],
+          ),
+        ),
+      ),
+    );
+  }
 }
