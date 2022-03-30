@@ -10,7 +10,7 @@ class AnimatedIconWidget extends StatefulWidget {
 class _AnimatedIconWidgetState extends State<AnimatedIconWidget>
     with TickerProviderStateMixin {
   late AnimationController _controller;
-
+  bool _extended = false;
   @override
   void initState() {
     _controller =
@@ -41,9 +41,15 @@ class _AnimatedIconWidgetState extends State<AnimatedIconWidget>
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              AnimatedIcon(
-                icon: AnimatedIcons.arrow_menu,
-                progress: _controller,
+              InkWell(
+                onTap: (() {
+                  _extended ? _controller.forward() : _controller.reverse();
+                  _extended = !_extended;
+                }),
+                child: AnimatedIcon(
+                  icon: AnimatedIcons.arrow_menu,
+                  progress: _controller,
+                ),
               )
             ],
           ),
