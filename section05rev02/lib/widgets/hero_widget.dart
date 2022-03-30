@@ -22,7 +22,24 @@ class _HeroWidgetState extends State<HeroWidget> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [],
+            children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (builder) => SecondHeroWidget()));
+                },
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  child: Image.asset(
+                    "assets/images/avatar.png",
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              )
+            ],
           ),
         ),
       ),
@@ -42,7 +59,10 @@ class _SecondHeroWidgetState extends State<SecondHeroWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hero Second Page"),
+        title: Text("Hero Second Page",
+            style: TextStyle(
+              color: Colors.black,
+            )),
         backgroundColor: Colors.yellow,
       ),
       body: Container(
@@ -50,9 +70,17 @@ class _SecondHeroWidgetState extends State<SecondHeroWidget> {
         child: Container(
           width: MediaQuery.of(context).size.width,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [],
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width,
+                child: Image.asset(
+                  "assets/images/avatar.png",
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ],
           ),
         ),
       ),
