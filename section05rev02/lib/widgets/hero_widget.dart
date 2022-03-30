@@ -23,19 +23,25 @@ class _HeroWidgetState extends State<HeroWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (builder) => SecondHeroWidget()));
-                },
-                child: Container(
-                  width: 200,
-                  height: 200,
-                  child: Image.asset(
-                    "assets/images/avatar.png",
-                    fit: BoxFit.contain,
+              Material(
+                color: Colors.transparent,
+                child: Hero(
+                  tag: "image01",
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => SecondHeroWidget()));
+                    },
+                    child: Container(
+                      width: 200,
+                      height: 200,
+                      child: Image.asset(
+                        "assets/images/avatar.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
                   ),
                 ),
               )
@@ -66,18 +72,24 @@ class _SecondHeroWidgetState extends State<SecondHeroWidget> {
         backgroundColor: Colors.yellow,
       ),
       body: Container(
-        padding: EdgeInsets.all(9),
+        padding: EdgeInsets.all(3),
         child: Container(
           width: MediaQuery.of(context).size.width,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                child: Image.asset(
-                  "assets/images/avatar.png",
-                  fit: BoxFit.contain,
+              Material(
+                color: Colors.transparent,
+                child: Hero(
+                  tag: "image01",
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    child: Image.asset(
+                      "assets/images/avatar.png",
+                      fit: BoxFit.contain,
+                    ),
+                  ),
                 ),
               ),
             ],
