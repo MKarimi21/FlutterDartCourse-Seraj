@@ -14,6 +14,8 @@ import 'package:section05rev02/widgets/rotate_widget.dart';
 import 'package:section05rev02/widgets/row_widget.dart';
 import 'package:section05rev02/widgets/text_widget.dart';
 
+import 'note/main_note.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -346,7 +348,25 @@ class _MainPageState extends State<MainPage> {
                   ),
                   color: Colors.brown,
                 ),
-              )
+              ),
+              Container(
+                margin: EdgeInsets.all(16),
+                width: MediaQuery.of(context).size.width,
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (builder) => MainNotePage()));
+                  },
+                  child: Text(
+                    "اپلیکیشن دفترچه یادداشت",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                  color: Colors.blue,
+                ),
+              ),
             ],
           ),
         ),
