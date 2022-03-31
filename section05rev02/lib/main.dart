@@ -36,6 +36,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// First Page for Section 01 till 08
+
 class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
@@ -300,6 +302,8 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+// Second Page for Section 09
 
 class MainPage extends StatefulWidget {
   MainPage({Key? key}) : super(key: key);
