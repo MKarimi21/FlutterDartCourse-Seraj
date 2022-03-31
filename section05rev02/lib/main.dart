@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text("منوی اولین اپلیکشن"),
-        backgroundColor: Colors.black12,
+        backgroundColor: Colors.brown,
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
