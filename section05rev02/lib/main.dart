@@ -330,7 +330,24 @@ class _MainPageState extends State<MainPage> {
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [],
+            children: [
+              Container(
+                margin: EdgeInsets.all(16),
+                width: MediaQuery.of(context).size.width,
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (builder) => HomePage()));
+                  },
+                  child: Text(
+                    "منوی اولین اپلیکیشن",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                  color: Colors.brown,
+                ),
+              )
+            ],
           ),
         ),
       ),
