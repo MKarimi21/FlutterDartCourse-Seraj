@@ -1,4 +1,7 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:section05rev02/Helper/shared_helper.dart';
 
 class FirstPageDialog extends StatelessWidget {
   String _name = "";
@@ -25,7 +28,9 @@ class FirstPageDialog extends StatelessWidget {
               height: 35,
               margin: EdgeInsets.only(top: 10),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  _savedNameToSharedPreferences(context);
+                },
                 child: Text(
                   "تایید",
                   style: TextStyle(
@@ -39,5 +44,12 @@ class FirstPageDialog extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _savedNameToSharedPreferences(context) {
+    SharedHelper sharedHelper = new SharedHelper();
+    sharedHelper.init();
+    sharedHelper.setName(_name);
+    Navigator.pop(context);
   }
 }
