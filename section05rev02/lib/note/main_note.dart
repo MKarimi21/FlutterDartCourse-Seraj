@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:section05rev02/helper/shared_helper.dart';
 import 'package:section05rev02/note/widgets/first_page_dialog.dart';
 
 class MainNotePage extends StatefulWidget {
@@ -9,11 +10,14 @@ class MainNotePage extends StatefulWidget {
 }
 
 class _MainNotePageState extends State<MainNotePage> {
+  String _welcome = "";
+  String _name = "";
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+      _handleNameState();
       _showNameDialog();
     });
   }
@@ -34,6 +38,28 @@ class _MainNotePageState extends State<MainNotePage> {
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.delete,
+                color: Colors.white,
+              ))
+        ],
+      ),
+      body: Container(
+        padding: EdgeInsets.all(16),
+        width: MediaQuery.of(context).size.width,
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "خوش آمدید ${_name} به برنامه ما",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -51,5 +77,12 @@ class _MainNotePageState extends State<MainNotePage> {
             ],
           );
         });
+  }
+
+  void _handleNameState() async {
+    SharedHelper sharedHelper = SharedHelper();
+    await sharedHelper.init();
+    _name = sharedHelper.getName();
+    setState(() {});
   }
 }
