@@ -44,9 +44,9 @@ class FirstPageDialog extends StatelessWidget {
     );
   }
 
-  void _savedNameToSharedPreferences(context) {
+  void _savedNameToSharedPreferences(context) async {
     SharedHelper sharedHelper = new SharedHelper();
-    sharedHelper.init();
+    await sharedHelper.init();
     sharedHelper.setName(_name);
     Navigator.pop(context);
   }

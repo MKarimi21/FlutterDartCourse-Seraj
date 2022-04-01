@@ -2,8 +2,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedHelper {
   late SharedPreferences sharedPreferences;
-  void init() async {
+  Future<String> init() async {
     sharedPreferences = await SharedPreferences.getInstance();
+    return "";
   }
 
   void setName(String name) {
