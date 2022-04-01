@@ -65,8 +65,8 @@ class _MainNotePageState extends State<MainNotePage> {
     );
   }
 
-  void _showNameDialog() {
-    showDialog(
+  void _showNameDialog() async {
+    var dialog = await showDialog(
         context: context,
         builder: (builder) {
           return Stack(
@@ -78,6 +78,7 @@ class _MainNotePageState extends State<MainNotePage> {
             ],
           );
         });
+    _handleNameState();
   }
 
   void _handleNameState() async {
