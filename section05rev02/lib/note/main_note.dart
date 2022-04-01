@@ -18,7 +18,6 @@ class _MainNotePageState extends State<MainNotePage> {
     super.initState();
     WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
       _handleNameState();
-      _showNameDialog();
     });
   }
 
@@ -40,7 +39,9 @@ class _MainNotePageState extends State<MainNotePage> {
         centerTitle: true,
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                _deleteName();
+              },
               icon: Icon(
                 Icons.delete,
                 color: Colors.white,
@@ -83,6 +84,15 @@ class _MainNotePageState extends State<MainNotePage> {
     SharedHelper sharedHelper = SharedHelper();
     await sharedHelper.init();
     _name = sharedHelper.getName();
+    if (_name.isEmpty) {
+      _showNameDialog();
+    }
     setState(() {});
+  }
+
+  void _deleteName() async {
+    SharedHelper sharedHelper = SharedHelper();
+    await sharedHelper.init();
+    sharedHelper.deletename();
   }
 }

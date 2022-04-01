@@ -11,6 +11,10 @@ class SharedHelper {
     sharedPreferences.setString("username", name);
   }
 
+  void deletename() {
+    sharedPreferences.remove("username");
+  }
+
   String getName() {
     return sharedPreferences.getString("username") ?? "";
   }
