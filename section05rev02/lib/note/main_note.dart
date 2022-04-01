@@ -45,7 +45,7 @@ class _MainNotePageState extends State<MainNotePage> {
           return Stack(
             children: [
               Align(
-                alignment: Alignment.bottomCenter,
+                alignment: Alignment.center,
                 child: FirstPageDialog(),
               )
             ],
