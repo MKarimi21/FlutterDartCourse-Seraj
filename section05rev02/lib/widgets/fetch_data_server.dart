@@ -42,7 +42,22 @@ class _FetchDataFromServerScreenState extends State<FetchDataFromServerScreen> {
                         height: 100,
                         width: MediaQuery.of(context).size.width,
                         margin: EdgeInsets.only(bottom: 5),
-                        color: Colors.red,
+                        color: Colors.red.withOpacity(0.2),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 80,
+                              height: 80,
+                              child: Image.network(e.value.image ?? ""),
+                            ),
+                            Expanded(
+                              child: Text(
+                                e.value.title ?? "",
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
                       );
                     }).toList(),
                   ),
