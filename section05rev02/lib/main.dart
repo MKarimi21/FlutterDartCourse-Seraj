@@ -7,6 +7,7 @@ import 'package:section05rev02/widgets/grid_widget.dart';
 import 'package:section05rev02/widgets/hero_widget.dart';
 import 'package:section05rev02/widgets/icon_widget.dart';
 import 'package:section05rev02/widgets/image_widget.dart';
+import 'package:section05rev02/widgets/json_parser.dart';
 import 'package:section05rev02/widgets/list_tile_widget.dart';
 import 'package:section05rev02/widgets/list_view_widget.dart';
 import 'package:section05rev02/widgets/opacity_widget.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.light,
           primarySwatch: Colors.green,
           fontFamily: "iransans"),
-      home: MainPage(),
+      home: JsonParserScreen(),
     );
   }
 }
@@ -365,6 +366,24 @@ class _MainPageState extends State<MainPage> {
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   color: Colors.blue,
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(16),
+                width: MediaQuery.of(context).size.width,
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (builder) => JsonParserScreen()));
+                  },
+                  child: Text(
+                    "صفحه جیسون",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                  color: Colors.red,
                 ),
               ),
             ],
