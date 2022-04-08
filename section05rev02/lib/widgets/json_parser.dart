@@ -9,7 +9,26 @@ class JsonParserScreen extends StatefulWidget {
 }
 
 class _JsonParserScreenState extends State<JsonParserScreen> {
-  List<BookModel> _bookList = [];
+  List<BookModel> _bookList = [
+    BookModel(
+      id: "1",
+      author: "Mosi",
+      language: "C++",
+      edition: "2",
+    ),
+    BookModel(
+      id: "2",
+      author: "rez",
+      language: "Python",
+      edition: "2",
+    ),
+    BookModel(
+      id: "3",
+      author: "asa",
+      language: "C",
+      edition: "2",
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +39,7 @@ class _JsonParserScreenState extends State<JsonParserScreen> {
       body: Container(
           child: _bookList.isEmpty
               ? Container(
-                  // True if
+                  // True if and is Empty
                   child: Center(
                       child: MaterialButton(
                     onPressed: () {
@@ -29,7 +48,17 @@ class _JsonParserScreenState extends State<JsonParserScreen> {
                     child: Text("دریافت کن"),
                   )),
                 )
-              : Container()),
+              : Container(
+                  // False if and is have date
+                  child: ListView(
+                    children: _bookList.asMap().entries.map((e) {
+                      return ListTile(
+                        title: Text(e.value.language ?? ""),
+                        subtitle: Text(e.value.language ?? ""),
+                      );
+                    }).toList(),
+                  ),
+                )),
     );
   }
 
