@@ -20,4 +20,11 @@ class BookModel {
       author = json['author'];
     }
   }
+
+  BookModel({
+    this.id,
+    this.language,
+    this.edition,
+    this.author,
+  });
 }
