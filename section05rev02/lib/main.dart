@@ -3,6 +3,7 @@ import 'package:section05rev02/widgets/animated_icon_widget.dart';
 import 'package:section05rev02/widgets/animation_container_widget.dart';
 import 'package:section05rev02/widgets/click_widget.dart';
 import 'package:section05rev02/widgets/container_widget.dart';
+import 'package:section05rev02/widgets/fetch_data_server.dart';
 import 'package:section05rev02/widgets/grid_widget.dart';
 import 'package:section05rev02/widgets/hero_widget.dart';
 import 'package:section05rev02/widgets/icon_widget.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.light,
           primarySwatch: Colors.green,
           fontFamily: "iransans"),
-      home: JsonParserScreen(),
+      home: FetchDataFromServerScreen(),
     );
   }
 }
@@ -380,6 +381,24 @@ class _MainPageState extends State<MainPage> {
                   },
                   child: Text(
                     "صفحه جیسون",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                  color: Colors.red,
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(16),
+                width: MediaQuery.of(context).size.width,
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (builder) => FetchDataFromServerScreen()));
+                  },
+                  child: Text(
+                    "صفحه جیسون زیادتر",
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
