@@ -1,4 +1,12 @@
-class BooksParser {}
+class BooksParser {
+  List<BookModel>? books;
+  BooksParser.fromJson(Map json) {
+    if (json['book'] != null) {
+      books = [];
+      json['book'].forEach((v) {});
+    }
+  }
+}
 
 class BookModel {
   String? id;

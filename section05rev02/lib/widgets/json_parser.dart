@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:section05rev02/model/book_parser.dart';
 
@@ -65,24 +67,26 @@ class _JsonParserScreenState extends State<JsonParserScreen> {
 
   void _parseJson() {
     String json = """
-{
-   "book": [
+          {
+            "book": [
 
-      {
-         "id": "01",
-         "language": "Java",
-         "edition": "third",
-         "author": "Herbert Schildt"
-      },
+              {
+                  "id": "01",
+                  "language": "Java",
+                  "edition": "third",
+                  "author": "Herbert Schildt"
+              },
 
-      {
-         "id": "07",
-         "language": "C++",
-         "edition": "second",
-         "author": "E.Balagurusamy"
-      }
+              {
+                  "id": "07",
+                  "language": "C++",
+                  "edition": "second",
+                  "author": "E.Balagurusamy"
+              }
 
-   ]
-}""";
+            ]
+          }""";
+
+    BooksParser booksParser = BooksParser.fromJson(jsonDecode(json));
   }
 }
