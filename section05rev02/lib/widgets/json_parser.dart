@@ -10,24 +10,24 @@ class JsonParserScreen extends StatefulWidget {
 
 class _JsonParserScreenState extends State<JsonParserScreen> {
   List<BookModel> _bookList = [
-    BookModel(
-      id: "1",
-      author: "Mosi",
-      language: "C++",
-      edition: "2",
-    ),
-    BookModel(
-      id: "2",
-      author: "rez",
-      language: "Python",
-      edition: "2",
-    ),
-    BookModel(
-      id: "3",
-      author: "asa",
-      language: "C",
-      edition: "2",
-    ),
+    // BookModel(
+    //   id: "1",
+    //   author: "Mosi",
+    //   language: "C++",
+    //   edition: "2",
+    // ),
+    // BookModel(
+    //   id: "2",
+    //   author: "rez",
+    //   language: "Python",
+    //   edition: "2",
+    // ),
+    // BookModel(
+    //   id: "3",
+    //   author: "asa",
+    //   language: "C",
+    //   edition: "2",
+    // ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -46,6 +46,7 @@ class _JsonParserScreenState extends State<JsonParserScreen> {
                       _parseJson();
                     },
                     child: Text("دریافت کن"),
+                    color: Colors.red,
                   )),
                 )
               : Container(
@@ -62,5 +63,26 @@ class _JsonParserScreenState extends State<JsonParserScreen> {
     );
   }
 
-  void _parseJson() {}
+  void _parseJson() {
+    String json = """
+{
+   "book": [
+
+      {
+         "id": "01",
+         "language": "Java",
+         "edition": "third",
+         "author": "Herbert Schildt"
+      },
+
+      {
+         "id": "07",
+         "language": "C++",
+         "edition": "second",
+         "author": "E.Balagurusamy"
+      }
+
+   ]
+}""";
+  }
 }
