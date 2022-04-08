@@ -57,7 +57,7 @@ class _JsonParserScreenState extends State<JsonParserScreen> {
                     children: _bookList.asMap().entries.map((e) {
                       return ListTile(
                         title: Text(e.value.language ?? ""),
-                        subtitle: Text(e.value.language ?? ""),
+                        subtitle: Text(e.value.author ?? ""),
                       );
                     }).toList(),
                   ),
@@ -88,5 +88,7 @@ class _JsonParserScreenState extends State<JsonParserScreen> {
           }""";
 
     BooksParser booksParser = BooksParser.fromJson(jsonDecode(json));
+    _bookList = booksParser.books;
+    setState(() {});
   }
 }
